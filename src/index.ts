@@ -7,7 +7,7 @@
 export async function getBlobFromImageSource(
   imageSource: string,
 ): Promise<Blob> {
-  const response = await fetch(`${imageSource}`)
+  const response = await fetch(`${imageSource}`,{mode: 'no-cors'})
   return await response.blob()
 }
 
