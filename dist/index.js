@@ -16,7 +16,7 @@ function __awaiter(thisArg, _arguments, P, generator) {
  */
 function getBlobFromImageSource(imageSource) {
     return __awaiter(this, void 0, void 0, function* () {
-        const response = yield fetch(`${imageSource}`, { mode: 'no-cors' });
+        const response = yield fetch(`${imageSource}`, { mode: 'cors' });
         return yield response.blob();
     });
 }
